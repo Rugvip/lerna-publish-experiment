@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "bump": "lerna version --no-push"
+    "release": "if [ \"$(git symbolic-ref --short HEAD)\" = master ]; then echo \"don't try to bump master\"; exit 1; else lerna version --no-push; fi"
   },
   "workspaces": {
     "packages": [
