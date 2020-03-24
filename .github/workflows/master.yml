@@ -27,7 +27,7 @@ jobs:
     - name: use node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        registry-url: https://registry.npmjs.org/
+        registry-url: https://registry.npmjs.org/ # Required for auth
         node-version: ${{ matrix.node-version }}
     - name: yarn install, build
       run: |
@@ -35,11 +35,13 @@ jobs:
         yarn build
       env:
         CI: true
+      # Publishes current version of packages that are not already present in the registry
     - name: publish
       run: npx --no-install lerna publish from-package --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         CI: true
+      # Tags the commit with the version in the a package if the tag doesn't exist
     - uses: Klemensas/action-autotag@1.2.3
       with:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
