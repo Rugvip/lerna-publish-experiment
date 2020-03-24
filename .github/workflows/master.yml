@@ -24,7 +24,7 @@ jobs:
       with:
         path: node_modules
         key: ${{ runner.os }}-modules-${{ hashFiles('yarn.lock') }}
-    - name: yarn install, build, and test
+    - name: yarn install, build
       run: |
         yarn install
         yarn build
