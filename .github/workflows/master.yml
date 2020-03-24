@@ -31,7 +31,7 @@ jobs:
       env:
         CI: true
     - name: publish
-      run: npx lerna publish from-package
+      run: npx lerna publish from-package --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         CI: true
