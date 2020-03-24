@@ -7,7 +7,7 @@
     "build": "tsc --outDir dist"
   },
   "publishConfig": {
-    "access": "private"
+    "access": "restricted"
   },
   "devDependencies": {
     "typescript": "^3.7.5"
