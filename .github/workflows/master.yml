@@ -40,3 +40,8 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         CI: true
+    - uses: Klemensas/action-autotag@1.2.3
+      with:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        package_root: "packages/a"
+        tag_prefix: "v"
