@@ -1,0 +1,14 @@
+{
+  "name": "@herpderper/e",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --outDir dist"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  },
+  "files": [
+    "dist"
+  ]
+}
