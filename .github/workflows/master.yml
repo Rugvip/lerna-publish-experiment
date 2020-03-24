@@ -24,6 +24,11 @@ jobs:
       with:
         path: node_modules
         key: ${{ runner.os }}-modules-${{ hashFiles('yarn.lock') }}
+    - name: use node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        registry-url: https://registry.npmjs.org/
+        node-version: ${{ matrix.node-version }}
     - name: yarn install, build
       run: |
         yarn install
