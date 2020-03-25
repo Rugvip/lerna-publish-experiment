@@ -1,6 +1,6 @@
 {
   "name": "@herpderper/b",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/index.js",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@herpderper/a": "^0.1.4"
+    "@herpderper/a": "^0.1.5"
   },
   "files": [
     "dist"
