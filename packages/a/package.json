@@ -8,7 +8,6 @@
     "url": "https://github.com/Rugvip/lerna-publish-experiment",
     "directory": "packages/a"
   },
-  "bugs": "https://github.com/Rugvip/lerna-publish-experiment/issues",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
