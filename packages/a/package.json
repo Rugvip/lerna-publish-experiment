@@ -1,6 +1,14 @@
 {
   "name": "@herpderper/a",
   "version": "0.1.5",
+  "description": "test package please ignore",
+  "homepage": "https://example.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rugvip/lerna-publish-experiment",
+    "directory": "packages/a"
+  },
+  "bugs": "https://github.com/Rugvip/lerna-publish-experiment/issues",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
@@ -12,6 +20,9 @@
   "devDependencies": {
     "typescript": "^3.7.5"
   },
+  "keywords": [
+    "testing"
+  ],
   "license": "MIT",
   "files": [
     "dist"
