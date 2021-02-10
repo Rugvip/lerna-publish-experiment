@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lerna-publish-experiment
+  annotations:
+    github.com/project-slug: Rugvip/lerna-publish-experiment
+  namespace: default
+spec:
+  type: other
+  lifecycle: unknown
+  owner: me
