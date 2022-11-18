@@ -1,6 +1,6 @@
 # lerna-publish-experiment
 
-Trying out publishing flows in a lerna monorepo, and some more things
+Trying out publishing flows in a lerna monorepo, and some more things better
 
 ## Features
 
