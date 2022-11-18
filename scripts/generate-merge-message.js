@@ -60,10 +60,7 @@ function getReleaseSchedule() {
 }
 
 function getCurrentRelease() {
-  const { version: releaseVersion } = require(resolvePath(
-    __dirname,
-    '../package.json'
-  ));
+  const { version: releaseVersion } = require(resolvePath('package.json'));
 
   const match = releaseVersion.match(/^(\d+\.\d+\.\d+)/);
   if (!match) {
