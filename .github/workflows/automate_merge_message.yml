@@ -23,6 +23,12 @@ jobs:
     if: github.repository == 'Rugvip/lerna-publish-experiment' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+
       - uses: actions/checkout@v3
         with:
           # Fetch the commit that's merged into the base rather than the target ref
