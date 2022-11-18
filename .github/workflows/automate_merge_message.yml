@@ -31,12 +31,10 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          # Fetch the commit that's merged into the base rather than the target ref
-          # This will let us diff only the contents of the PR, without fetching more history
-          ref: 'refs/pull/${{ github.event.pull_request.number }}/merge'
+          ref: '${{ github.event.pull_request.merge_commit_sha }}'
 
       - name: fetch base
-        run: git fetch --depth 1 origin ${{ github.base_ref }}
+        run: git fetch --depth 1 origin ${{ github.event.pull_request.base.sha }}
 
         # We avoid using the in-source script since this workflow has elevated permissions that we don't want to expose
       - name: Generate Message
