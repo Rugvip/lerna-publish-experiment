@@ -20,7 +20,7 @@ permissions:
 jobs:
   feedback:
     # prevent running towards forks, and only run on merged PRs
-    if: github.repository == 'backstage/backstage' && github.event.pull_request.merged == true
+    if: github.repository == 'Rugvip/lerna-publish-experiment' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -46,8 +46,8 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.pull_request.number }}
         with:
           script: |
-            const owner = "backstage";
-            const repo = "backstage";
+            const owner = "Rugvip";
+            const repo = "lerna-publish-experiment";
             const body = require('fs').readFileSync('message.txt', 'utf8').trim();
             const issue_number = Number(process.env.ISSUE_NUMBER);
 
