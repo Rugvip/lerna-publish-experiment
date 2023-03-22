@@ -6,9 +6,12 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: |
+      value: >
         Thank you for your interest and contributions to the Backstage project! 🙏
 
+  - type: markdown
+    attributes:
+      value: >
         This form is used to request to be come an Organization Member as described
         by the [Backstage Governance](https://github.com/backstage/backstage/blob/master/GOVERNANCE.md#organization-member).
         In addition to becoming of the Backstage GitHub organization, this role also
