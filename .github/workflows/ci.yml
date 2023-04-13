@@ -1,0 +1,13 @@
+name: Derp
+
+on:
+  push:
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+
+  check:
+    uses: ./.github/workflows/check.yml
+    secrets: inherit
