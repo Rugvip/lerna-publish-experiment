@@ -2,7 +2,7 @@
 
 Trying out publishing flows in a lerna monorepo
 
-## Features
+## Features sup
 
 - Version bumps happen through PRs for review.
 - Local `yarn release` helps out with making that PR
