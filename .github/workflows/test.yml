@@ -1,0 +1,13 @@
+name: Test
+
+on:
+  push:
+    paths:
+      - packages/**
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Tested!"
