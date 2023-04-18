@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     strategy:
-      fail-fast: false
       matrix:
         derp: [a, b]
-    name: "Test the thing ${{a}}"
+    name: "Test the thing ${{derp}}"
     steps:
       - run: echo "Tested!"
