@@ -12,6 +12,6 @@ jobs:
     strategy:
       matrix:
         derp: [a, b]
-    name: "Test the thing ${{derp}}"
+    name: "Test the thing ${{ matrix.derp }}"
     steps:
       - run: echo "Tested!"
