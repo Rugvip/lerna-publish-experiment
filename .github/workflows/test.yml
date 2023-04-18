@@ -8,6 +8,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        derp: [a, b]
+    name: "Test the thing ${{a}}"
     steps:
       - run: echo "Tested!"
