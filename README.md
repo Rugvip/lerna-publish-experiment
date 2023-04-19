@@ -8,3 +8,23 @@ Trying out publishing flows in a lerna monorepo
 - Local `yarn release` helps out with making that PR
 - Workflow tags the release once it's in master
 - Publish to NPM
+
+
+a
+a
+a
+a
+a
+
+a
+a
+a
+a
+a
+s
+a
+a
+a
+a
+
+a
