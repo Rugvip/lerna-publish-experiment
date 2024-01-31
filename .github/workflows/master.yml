@@ -25,7 +25,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: hmarr/debug-action@v2    - name: bool1 A
+    - uses: hmarr/debug-action@v2
+    - name: bool1 A
       run: echo hello
       if: inputs.bool1 == 'true'
     - name: bool1 B
