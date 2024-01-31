@@ -1,6 +1,22 @@
 name: Master Build
 
 on:
+  workflow_dispatch:
+    inputs:
+      bool1:
+        description: bool1
+        required: false
+        type: boolean
+      bool2:
+        description: bool2
+        required: true
+        default: false
+        type: boolean
+      bool3:
+        description: bool3
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [ master ]
 
@@ -9,6 +25,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: hmarr/debug-action@v2
+    - run: bool1 A
+      if: bool1 == 'true'
+    - run: bool1 B
+      if: bool1 != 'false'
+    - run: bool1 C
+      if: bool1 == true
+    - run: bool1 D
+      if: bool1 != false
+    - run: bool2 A
+      if: bool2 == 'true'
+    - run: bool2 B
+      if: bool2 != 'false'
+    - run: bool2 C
+      if: bool2 == true
+    - run: bool2 D
+      if: bool2 != false
+    - run: bool3 A
+      if: bool3 == 'true'
+    - run: bool3 B
+      if: bool3 != 'false'
+    - run: bool3 C
+      if: bool3 == true
+    - run: bool3 D
+      if: bool3 != false
     - uses: actions/checkout@v2
     - name: find location of yarn cache
       id: yarn-cache
