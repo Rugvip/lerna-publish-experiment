@@ -25,30 +25,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: hmarr/debug-action@v2
-    - run: bool1 A
+    - uses: hmarr/debug-action@v2    - name: bool1 A
+      run: echo hello
       if: inputs.bool1 == 'true'
-    - run: bool1 B
+    - name: bool1 B
+      run: echo hello
       if: inputs.bool1 != 'false'
-    - run: bool1 C
+    - name: bool1 C
+      run: echo hello
       if: inputs.bool1 == true
-    - run: bool1 D
+    - name: bool1 D
+      run: echo hello
       if: inputs.bool1 != false
-    - run: bool2 A
+    - name: bool2 A
+      run: echo hello
       if: inputs.bool2 == 'true'
-    - run: bool2 B
+    - name: bool2 B
+      run: echo hello
       if: inputs.bool2 != 'false'
-    - run: bool2 C
+    - name: bool2 C
+      run: echo hello
       if: inputs.bool2 == true
-    - run: bool2 D
+    - name: bool2 D
+      run: echo hello
       if: inputs.bool2 != false
-    - run: bool3 A
+    - name: bool3 A
+      run: echo hello
       if: inputs.bool3 == 'true'
-    - run: bool3 B
+    - name: bool3 B
+      run: echo hello
       if: inputs.bool3 != 'false'
-    - run: bool3 C
+    - name: bool3 C
+      run: echo hello
       if: inputs.bool3 == true
-    - run: bool3 D
+    - name: bool3 D
+      run: echo hello
       if: inputs.bool3 != false
     - uses: actions/checkout@v2
     - name: find location of yarn cache
