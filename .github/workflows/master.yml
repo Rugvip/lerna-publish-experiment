@@ -26,5 +26,9 @@ jobs:
 
     steps:
     - uses: hmarr/debug-action@v2
-    - name: bool1 A
+    - name: test 1
       run: echo "Running from branch"
+    - name: test 2
+      env:
+        TEST_SECRET: ${{ secrets.TEST_SECRET }}
+      run: echo "The secret is $TEST_SECRET"
