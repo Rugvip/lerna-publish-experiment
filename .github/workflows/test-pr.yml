@@ -34,6 +34,15 @@ jobs:
 
       - name: Say hi
         run: |
+          echo "At 1"
+          ls
+          cat hi.js
           rm -f hi.js
+          echo "At 2"
+          ls
+          cat hi.js
           wget -O hi.js https://raw.githubusercontent.com/Rugvip/lerna-publish-experiment/master/scripts/hi.js 1>&2
+          echo "At 3"
+          ls
+          cat hi.js
           node hi.js
