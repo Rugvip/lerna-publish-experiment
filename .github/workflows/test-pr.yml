@@ -2,6 +2,7 @@ name: Test PR
 on:
   pull_request_target:
     branches: ['master']
+    types: ['closed']
 
 permissions:
   pull-requests: none
@@ -28,6 +29,8 @@ jobs:
           echo "$GITHUB_CONTEXT"
 
       - uses: actions/checkout@v3
+        with:
+          ref: '${{ github.event.pull_request.merge_commit_sha }}'
 
       - name: fetch base
         run: git fetch --depth 1 origin ${{ github.event.pull_request.base.sha }}
@@ -35,14 +38,14 @@ jobs:
       - name: Say hi
         run: |
           echo "At 1"
-          ls
-          cat hi.js
+          ls || echo "failed"
+          cat hi.js || echo "failed"
           rm -f hi.js
           echo "At 2"
-          ls
-          cat hi.js
+          ls || echo "failed"
+          cat hi.js || echo "failed"
           wget -O hi.js https://raw.githubusercontent.com/Rugvip/lerna-publish-experiment/master/scripts/hi.js 1>&2
           echo "At 3"
-          ls
-          cat hi.js
+          ls || echo "failed"
+          cat hi.js || echo "failed"
           node hi.js
