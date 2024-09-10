@@ -13,9 +13,9 @@ body:
     attributes:
       value: >
         This form is used to request Organization Member status in the Backstage project,
-        as described by the [Backstage Governance](https://github.com/backstage/backstage/blob/master/GOVERNANCE.md#organization-member).
+        as described by the [Backstage Governance](https://github.com/backstage/community/blob/master/GOVERNANCE.md#organization-member).
         In addition to becoming member of the Backstage GitHub organization, this role also
-        comes with the responsibilities and requirements described in the governance.
+        comes with the responsibilities and requirements that are described in the governance.
 
   - type: checkboxes
     id: read-code-of-conduct
@@ -26,25 +26,35 @@ body:
           required: true
 
   - type: dropdown
-    id: contributor-time
+    id: member-type
     validations:
       required: true
     attributes:
-      label: 'Is your first contribution to Backstage at least 3 months ago?'
-      description: Organization members need to have been contributing for at least 3 months, or be a member of a Project Area Maintainer team.
+      label: 'Through which path are you seeking to become an organization member?'
+      description: There are three different paths to becoming an organization member, each of them outlined in the [Backstage Governance](https://github.com/backstage/community/blob/master/GOVERNANCE.md#organization-member).
       options:
-        - 'No'
-        - Yes, I have been contributing to Backstage for at least 3 months
-        - No, but I am the member of a Project Area Maintainer team in my organization
+        - 1. I been contributing for at least 3 months with numerous contributions and wish to become a standalone org-member
+        - 2. The team that I am a member of in my organization are maintainers of a Project Area in Backstage
+        - 3. I am a maintainer of a plugin the Backstage Community Plugins Repository
 
   - type: textarea
     id: contributions
-    validations:
-      required: true
     attributes:
-      label: 'Highlighted Contributions'
-      description: 'The Backstage governance requires that organization members have made some contributions to the project. Please choose a couple (3-5) of these contributions that you would like to highlight. If you are the member of a Project Area Maintainer team, please let us know your organization, team, and project area instead.'
+      label: '(1) Highlighted Contributions'
+      description: 'This applies if you selected option 1 above. The Backstage governance requires that standalone organization members have made some contributions to the project. Please choose a couple (3-5) of these contributions that you would like to highlight. If you are the member of a Project Area Maintainer team, please let us know your organization, team, and project area instead.'
       placeholder: 'Link to GitHub issues, accepted PRs, or other contributions that you would like to highlight'
+
+  - type: input
+    id: project-area
+    attributes:
+      label: '(2) Project Area'
+      description: 'This applies if you selected option 2 above. Please specify the project area that your team maintains'
+
+  - type: textarea
+    id: plugin-owner
+    attributes:
+      label: '(3) Plugin code owner PR'
+      description: 'This applies if you selected option 3 above. Please link to the pull request where you were added as a code owner of a plugin in the community-plugins repository'
 
   - type: input
     id: discord-username
