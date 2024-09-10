@@ -6,17 +6,20 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: |
+      value: >
         ### Thank you for your interest and contributions to the Backstage project! 🙏
 
   - type: markdown
     attributes:
-      value: |
+      value: >
         This form is used to request Organization Member status in the Backstage project,
         as described by the [Backstage Governance](https://github.com/backstage/community/blob/master/GOVERNANCE.md#organization-member).
         In addition to becoming member of the Backstage GitHub organization, this role also
         comes with the responsibilities and requirements that are described in the governance.
-        <br>
+
+  - type: markdown
+    attributes:
+      value: <br>
 
   - type: dropdown
     id: member-type
@@ -31,39 +34,25 @@ body:
 
   - type: markdown
     attributes:
-      value: |
-        <br>
-        ### If you selected option 1
+      value: <br>
 
   - type: textarea
     id: contributions
     attributes:
-      label: 'Highlighted Contributions'
+      label: 'If option 1: Highlighted Contributions'
       description: 'The Backstage governance requires that standalone organization members have made some contributions to the project. Please choose a couple (3-5) of these contributions that you would like to highlight. If you are the member of a Project Area Maintainer team, please let us know your organization, team, and project area instead.'
       placeholder: 'Link to GitHub issues, accepted PRs, or other contributions that you would like to highlight'
-
-  - type: markdown
-    attributes:
-      value: |
-        <br>
-        ### If you selected option 2
 
   - type: input
     id: project-area
     attributes:
-      label: 'Project Area'
+      label: 'If option 2: Project Area'
       description: 'Please specify the project area that your team maintains'
-
-  - type: markdown
-    attributes:
-      value: |
-        <br>
-        ### If you selected option 3
 
   - type: input
     id: plugin-owner
     attributes:
-      label: 'Plugin code owner PR'
+      label: 'If option 3: Plugin code owner PR'
       description: 'Please link to the pull request where you were added as a code owner of a plugin in the community-plugins repository'
 
   - type: input
