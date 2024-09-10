@@ -6,16 +6,17 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: >
+      value: |
         ### Thank you for your interest and contributions to the Backstage project! 🙏
 
   - type: markdown
     attributes:
-      value: >
+      value: |
         This form is used to request Organization Member status in the Backstage project,
         as described by the [Backstage Governance](https://github.com/backstage/community/blob/master/GOVERNANCE.md#organization-member).
         In addition to becoming member of the Backstage GitHub organization, this role also
         comes with the responsibilities and requirements that are described in the governance.
+        <br>
 
   - type: dropdown
     id: member-type
@@ -30,7 +31,9 @@ body:
 
   - type: markdown
     attributes:
-      value: '### If you selected option 1'
+      value: |
+        <br>
+        ### If you selected option 1
 
   - type: textarea
     id: contributions
@@ -41,7 +44,9 @@ body:
 
   - type: markdown
     attributes:
-      value: '### If you selected option 2'
+      value: |
+        <br>
+        ### If you selected option 2
 
   - type: input
     id: project-area
@@ -51,7 +56,9 @@ body:
 
   - type: markdown
     attributes:
-      value: '### If you selected option 3'
+      value: |
+        <br>
+        ### If you selected option 3
 
   - type: input
     id: plugin-owner
