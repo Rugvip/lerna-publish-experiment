@@ -31,20 +31,20 @@ body:
   - type: textarea
     id: contributions
     attributes:
-      label: 'Highlighted Contributions - If you selected option 1'
+      label: 'If you selected option 1: Highlighted Contributions'
       description: 'The Backstage governance requires that standalone organization members have made some contributions to the project. Please choose a couple (3-5) of these contributions that you would like to highlight. If you are the member of a Project Area Maintainer team, please let us know your organization, team, and project area instead.'
       placeholder: 'Link to GitHub issues, accepted PRs, or other contributions that you would like to highlight'
 
   - type: input
     id: project-area
     attributes:
-      label: 'Project Area - If you selected option 2'
+      label: 'If you selected option 2: Project Area'
       description: 'Please specify the project area that your team maintains'
 
   - type: input
     id: plugin-owner
     attributes:
-      label: 'Plugin code owner PR - If you selected option 3'
+      label: 'If you selected option 3: Plugin code owner PR'
       description: 'Please link to the pull request where you were added as a code owner of a plugin in the community-plugins repository'
 
   - type: input
