@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: >
-        Thank you for your interest and contributions to the Backstage project! 🙏
+        ### Thank you for your interest and contributions to the Backstage project! 🙏
 
   - type: markdown
     attributes:
@@ -17,14 +17,6 @@ body:
         In addition to becoming member of the Backstage GitHub organization, this role also
         comes with the responsibilities and requirements that are described in the governance.
 
-  - type: checkboxes
-    id: read-code-of-conduct
-    attributes:
-      label: 'Have you read the Code of Conduct?'
-      options:
-        - label: 'I have read the [Code of Conduct](https://github.com/backstage/backstage/blob/master/CODE_OF_CONDUCT.md)'
-          required: true
-
   - type: dropdown
     id: member-type
     validations:
@@ -33,7 +25,7 @@ body:
       label: 'Through which path are you seeking to become an organization member?'
       description: There are three different paths to becoming an organization member, each of them outlined in the [Backstage Governance](https://github.com/backstage/community/blob/master/GOVERNANCE.md#organization-member).
       options:
-        - 1. I been contributing for at least 3 months with numerous contributions and wish to become a standalone org-member
+        - 1. I been contributing for at least 3 months and wish to become a standalone org-member
         - 2. The team that I am a member of in my organization are maintainers of a Project Area in Backstage
         - 3. I am a maintainer of a plugin the Backstage Community Plugins Repository
 
@@ -50,7 +42,7 @@ body:
       label: '(2) Project Area'
       description: 'This applies if you selected option 2 above. Please specify the project area that your team maintains'
 
-  - type: textarea
+  - type: input
     id: plugin-owner
     attributes:
       label: '(3) Plugin code owner PR'
@@ -74,3 +66,11 @@ body:
     id: other
     attributes:
       label: 'Any other context that you wish to share'
+
+  - type: checkboxes
+    id: read-code-of-conduct
+    attributes:
+      label: 'Have you read the Code of Conduct?'
+      options:
+        - label: 'I have read the [Code of Conduct](https://github.com/backstage/backstage/blob/master/CODE_OF_CONDUCT.md)'
+          required: true
