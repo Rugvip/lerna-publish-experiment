@@ -55,6 +55,10 @@ body:
       label: 'If option 3: Plugin code owner PR'
       description: 'Please link to the pull request where you were added as a code owner of a plugin in the community-plugins repository'
 
+  - type: markdown
+    attributes:
+      value: <br>
+
   - type: input
     id: discord-username
     attributes:
