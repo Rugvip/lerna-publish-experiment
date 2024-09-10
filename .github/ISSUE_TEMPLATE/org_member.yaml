@@ -28,23 +28,35 @@ body:
         - 2. The team that I am a member of in my organization are maintainers of a Project Area in Backstage
         - 3. I am a maintainer of a plugin the Backstage Community Plugins Repository
 
+  - type: markdown
+    attributes:
+      value: '### If you selected option 1'
+
   - type: textarea
     id: contributions
     attributes:
-      label: 'If you selected option 1: Highlighted Contributions'
+      label: 'Highlighted Contributions'
       description: 'The Backstage governance requires that standalone organization members have made some contributions to the project. Please choose a couple (3-5) of these contributions that you would like to highlight. If you are the member of a Project Area Maintainer team, please let us know your organization, team, and project area instead.'
       placeholder: 'Link to GitHub issues, accepted PRs, or other contributions that you would like to highlight'
+
+  - type: markdown
+    attributes:
+      value: '### If you selected option 2'
 
   - type: input
     id: project-area
     attributes:
-      label: 'If you selected option 2: Project Area'
+      label: 'Project Area'
       description: 'Please specify the project area that your team maintains'
+
+  - type: markdown
+    attributes:
+      value: '### If you selected option 3'
 
   - type: input
     id: plugin-owner
     attributes:
-      label: 'If you selected option 3: Plugin code owner PR'
+      label: 'Plugin code owner PR'
       description: 'Please link to the pull request where you were added as a code owner of a plugin in the community-plugins repository'
 
   - type: input
