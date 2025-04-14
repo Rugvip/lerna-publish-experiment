@@ -11,7 +11,7 @@ body:
 
         Please fill in each section completely. Thank you!
   - type: textarea
-    id: search_terms
+    id: search-terms
     attributes:
       label: '🔎 Search Terms'
       description: |
@@ -26,12 +26,18 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Are you willing to submit PR?
-      description: This is absolutely not required, but we are happy to guide you in the contribution process.
+      label: What area of the project do you think this bug is related to?
+      description: This will help find an owner for the issue faster.
       options:
-        - Yes I am willing to submit a PR!
-        - No, but I'm happy to collaborate on a PR with someone else
-        - No, I don't have time to work on this right now
+        - Unknown
+        - Framework
+        - CLI Tooling
+        - Software Catalog
+        - Software Templates
+        - TechDocs
+        - Search
+        - Auth
+        - Integrations
     validations:
       required: true
   - type: checkboxes
@@ -47,7 +53,7 @@ body:
       required: true
     attributes:
       label: '📝 Description & Context'
-      description: 'A description of what the current behavior is and any additional context'
+      description: 'A description of what the current behavior is and any additional context.'
       placeholder: |
         Describe the observed behavior that you deem to be incorrect, as well as any additional context that might be useful in understanding the bug.
 
