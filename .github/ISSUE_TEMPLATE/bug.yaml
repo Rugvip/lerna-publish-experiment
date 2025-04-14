@@ -10,14 +10,19 @@ body:
         Please [search thoroughly in GitHub](https://github.com/backstage/backstage/search?type=Issues) before reporting a new bug in order to avoid duplicates.
 
         Please fill in each section completely. Thank you!
+  - type: checkboxes
+    id: read-issue-process
+    attributes:
+      label: '📜 Important Information'
+      options:
+        - label: 'Descriptions of the issue labels in this repository can be found in [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
+          required: true
   - type: textarea
     id: search-terms
     attributes:
       label: '🔎 Search Terms'
       description: |
         What search terms did you use when trying to find an existing bug report?
-
-        List them here so people in the future can find this one more easily.
       placeholder: |
         List of keywords you searched for before creating this issue. Write them down here so that others can find this bug more easily and help provide feedback.
 
@@ -30,30 +35,40 @@ body:
       description: This will help find an owner for the issue faster.
       options:
         - Unknown
+        - CLI / Tooling
         - Framework
-        - CLI Tooling
-        - Software Catalog
-        - Software Templates
-        - TechDocs
-        - Search
-        - Auth
-        - Integrations
+        - Design System
+        - Integration - GitHub
+        - Integration - GitLab
+        - Integration - Gerrit
+        - Integration - Azure Devops
+        - Integration - Bitbucket
+        - Integration - Gitea
+        - Integration - AWS
+        - Integration - GCP
+        - Integration - Azure
+        - Integration - Other
+        - Microsite / Documentation
+        - Plugin - App
+        - Plugin - Auth
+        - Plugin - Catalog
+        - Plugin - Scaffolder
+        - Plugin - TechDocs
+        - Plugin - Proxy
+        - Plugin - Search
+        - Plugin - Events
+        - Plugin - Permissions
+        - Plugin - Notifications
+        - Plugin - Kubernetes
+        - Plugin - Other
     validations:
       required: true
-  - type: checkboxes
-    id: read-issue-process
-    attributes:
-      label: '📜 General Information'
-      options:
-        - label: 'Descriptions of the issue labels in this repository can be found in [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
-          required: true
   - type: textarea
     id: description
     validations:
       required: true
     attributes:
       label: '📝 Description & Context'
-      description: 'A description of what the current behavior is and any additional context.'
       placeholder: |
         Describe the observed behavior that you deem to be incorrect, as well as any additional context that might be useful in understanding the bug.
 
@@ -63,8 +78,7 @@ body:
     validations:
       required: true
     attributes:
-      label: '👍 Expected behavior'
-      description: 'What did you think should happen?'
+      label: '👍 Expected Behavior'
       placeholder: |
         Describe the behavior or result that you expected instead of the observed one.
         
@@ -72,13 +86,14 @@ body:
   - type: markdown
     attributes:
       value: |
+
         ### Reproducing the bug
 
         Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed. Except for very high impact bugs we strongly encourage you to provide a repository where the bug is reproduced.
 
         If you are unable to provide a reproduction repo, please explain the reproduction steps in as much detail as possible, and include the output of `yarn backstage-cli info` if relevant.
         
-        If inadequate or no reproduction steps are provided the bug report is likely to be labelled as needing reproduction steps before it can be progressed further, and it will be closed as stale faster.
+        If inadequate or no reproduction steps are provided, the bug report is likely to be labelled as needing reproduction steps before it can be progressed further.
   - type: input
     id: reproduction-repo
     attributes:
@@ -89,8 +104,6 @@ body:
       required: false
   - type: textarea
     id: steps-to-reproduce
-    validations:
-      required: true
     attributes:
       label: '🐾 Reproduction steps'
       description: 'How do you trigger this bug? Please walk us through it step by step.'
@@ -98,6 +111,8 @@ body:
         1. Go to '...'
         2. Click on '....'
         3. Scroll down to '....'"
+    validations:
+      required: false
   - type: checkboxes
     id: read-code-of-conduct
     attributes:
