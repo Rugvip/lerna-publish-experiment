@@ -4,13 +4,6 @@ labels:
   - bug
   - status:needs-triage
 body:
-  - type: checkboxes
-    id: read-issue-process
-    attributes:
-      label: '⚙️ Issue process information'
-      options:
-        - label: 'More information about our [labels and issue process](#todo)'
-          required: true
   - type: markdown
     attributes:
       value: |
@@ -31,14 +24,34 @@ body:
         e.g. "catalog github rate limited", "http root service configurer", "scaffolder template include", "entity card title"
     validations:
       required: true
+  - type: dropdown
+    attributes:
+      label: Are you willing to submit PR?
+      description: This is absolutely not required, but we are happy to guide you in the contribution process.
+      options:
+        - Yes I am willing to submit a PR!
+        - No, but I'm happy to collaborate on a PR with someone else
+        - No, I don't have time to work on this right now
+    validations:
+      required: true
+  - type: checkboxes
+    id: read-issue-process
+    attributes:
+      label: '📜 General Information'
+      options:
+        - label: 'Descriptions of the issue labels in this repository can be found in [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
+          required: true
   - type: textarea
     id: description
     validations:
       required: true
     attributes:
-      label: '📜 Description & context'
+      label: '📝 Description & Context'
       description: 'A description of what the current behavior is and any additional context'
-      placeholder: 'When I ...'
+      placeholder: |
+        Describe the observed behavior that you deem to be incorrect, as well as any additional context that might be useful in understanding the bug.
+
+        e.g. "When i navigate to the catalog index page it loads without a hitch. May be related to https://xkcd.com/1172"
   - type: textarea
     id: expected-behavior
     validations:
@@ -46,14 +59,20 @@ body:
     attributes:
       label: '👍 Expected behavior'
       description: 'What did you think should happen?'
-      placeholder: 'It should ...'
+      placeholder: |
+        Describe the behavior or result that you expected instead of the observed one.
+        
+        e.g. "I expect the catalog index page to overheat my CPU"
   - type: markdown
     attributes:
       value: |
-        Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed.
-        Except for very high impact bugs we strongly encourage you to provide a repository where the bug is reproduced.
+        ### Reproducing the bug
+
+        Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed. Except for very high impact bugs we strongly encourage you to provide a repository where the bug is reproduced.
 
         If you are unable to provide a reproduction repo, please explain the reproduction steps in as much detail as possible, and include the output of `yarn backstage-cli info` if relevant.
+        
+        If inadequate or no reproduction steps are provided the bug report is likely to be labelled as needing reproduction steps before it can be progressed further, and it will be closed as stale faster.
   - type: input
     id: reproduction-repo
     attributes:
@@ -69,9 +88,9 @@ body:
     attributes:
       label: '🐾 Reproduction steps'
       description: 'How do you trigger this bug? Please walk us through it step by step.'
-      placeholder:
-        1. Go to '...'\n
-        2. Click on '....'\n
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
         3. Scroll down to '....'"
   - type: checkboxes
     id: read-code-of-conduct
@@ -85,6 +104,7 @@ body:
       label: Are you willing to submit PR?
       description: This is absolutely not required, but we are happy to guide you in the contribution process.
       options:
+        - Undecided
         - Yes I am willing to submit a PR!
         - No, but I'm happy to collaborate on a PR with someone else
         - No, I don't have time to work on this right now
