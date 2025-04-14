@@ -1,0 +1,93 @@
+name: '🐛 Bug Report'
+description: 'Report a bug that you have encountered'
+labels:
+  - bug
+  - status:needs-triage
+body:
+  - type: checkboxes
+    id: read-issue-process
+    attributes:
+      label: '⚙️ Issue process information'
+      options:
+        - label: 'More information about our [labels and issue process](#todo)'
+          required: true
+          default: true
+  - type: markdown
+    attributes:
+      value: |
+        Please [search thoroughly in GitHub](https://github.com/backstage/backstage/search?type=Issues) before reporting a new bug in order to avoid duplicates.
+
+        Please fill in each section completely. Thank you!
+  - type: textarea
+    id: search_terms
+    attributes:
+      label: '🔎 Search Terms'
+      description: |
+        What search terms did you use when trying to find an existing bug report?
+
+        List them here so people in the future can find this one more easily.
+      placeholder: |
+        List of keywords you searched for before creating this issue. Write them down here so that others can find this bug more easily and help provide feedback.
+
+        e.g. "catalog github rate limited", "http root service configurer", "scaffolder template include", "entity card title"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: '📜 Description & context'
+      description: 'A description of what the current behavior is and any additional context'
+      placeholder: 'When I ...'
+  - type: textarea
+    id: expected-behavior
+    validations:
+      required: true
+    attributes:
+      label: '👍 Expected behavior'
+      description: 'What did you think should happen?'
+      placeholder: 'It should ...'
+  - type: markdown
+    attributes:
+      value: |
+        Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed.
+        Except for very high impact bugs we strongly encourage you to provide a repository where the bug is reproduced.
+
+        If you are unable to provide a reproduction repo, please explain the reproduction steps in as much detail as possible, and include the output of `yarn backstage-cli info` if relevant.
+  - type: input
+    id: reproduction-repo
+    attributes:
+      label: '📦 Reproduction Repo'
+      description: A link to a GitHub repository where the issue can be reproduced
+      placeholder: https://github.com/ghost/my-repro-repo
+    validations:
+      required: false
+  - type: textarea
+    id: steps-to-reproduce
+    validations:
+      required: true
+    attributes:
+      label: '🐾 Reproduction steps'
+      description: 'How do you trigger this bug? Please walk us through it step by step.'
+      placeholder:
+        1. Go to '...'\n
+        2. Click on '....'\n
+        3. Scroll down to '....'"
+  - type: checkboxes
+    id: read-code-of-conduct
+    attributes:
+      label: '🏢 Have you read the Code of Conduct?'
+      options:
+        - label: 'I have read the [Code of Conduct](https://github.com/backstage/backstage/blob/master/CODE_OF_CONDUCT.md)'
+          required: true
+  - type: dropdown
+    attributes:
+      label: Are you willing to submit PR?
+      description: This is absolutely not required, but we are happy to guide you in the contribution process.
+      options:
+        - Yes I am willing to submit a PR!
+        - No, but I'm happy to collaborate on a PR with someone else
+        - No, I don't have time to work on this right now
+    validations:
+      required: true
