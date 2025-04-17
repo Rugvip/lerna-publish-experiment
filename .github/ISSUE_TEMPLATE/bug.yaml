@@ -35,32 +35,20 @@ body:
       description: This will help find an owner for the issue faster.
       options:
         - Unknown
-        - CLI / Tooling
-        - Framework
+        - Auditor
+        - Catalog
         - Design System
-        - Integration - GitHub
-        - Integration - GitLab
-        - Integration - Gerrit
-        - Integration - Azure Devops
-        - Integration - Bitbucket
-        - Integration - Gitea
-        - Integration - AWS
-        - Integration - GCP
-        - Integration - Azure
-        - Integration - Other
-        - Microsite / Documentation
-        - Plugin - App
-        - Plugin - Auth
-        - Plugin - Catalog
-        - Plugin - Scaffolder
-        - Plugin - TechDocs
-        - Plugin - Proxy
-        - Plugin - Search
-        - Plugin - Events
-        - Plugin - Permissions
-        - Plugin - Notifications
-        - Plugin - Kubernetes
-        - Plugin - Other
+        - Documentation
+        - Events
+        - Helm Charts
+        - Home
+        - Kubernetes
+        - Notifications
+        - OpenAPI Tooling
+        - Permission Framework
+        - Scaffolder
+        - Search
+        - TechDocs
     validations:
       required: true
   - type: textarea
@@ -81,7 +69,7 @@ body:
       label: '👍 Expected Behavior'
       placeholder: |
         Describe the behavior or result that you expected instead of the observed one.
-        
+
         e.g. "I expect the catalog index page to overheat my CPU"
   - type: markdown
     attributes:
@@ -92,7 +80,7 @@ body:
         Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed. Except for very high impact bugs we strongly encourage you to provide a repository where the bug is reproduced.
 
         If you are unable to provide a reproduction repo, please explain the reproduction steps in as much detail as possible, and include the output of `yarn backstage-cli info` if relevant.
-        
+
         If inadequate or no reproduction steps are provided, the bug report is likely to be labelled as needing reproduction steps before it can be progressed further.
   - type: input
     id: reproduction-repo
