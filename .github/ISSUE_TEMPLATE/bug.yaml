@@ -30,9 +30,10 @@ body:
       required: true
   - type: markdown
     attributes:
+      value: '<br/>' # empty space
+  - type: markdown
+    attributes:
       value: |
-
-
         ## Defining the bug
 
         Defining the bug accurately will help ensure that it is identified and fixed correctly.
@@ -103,9 +104,10 @@ body:
         e.g. "I expect the catalog index page to overheat my CPU"
   - type: markdown
     attributes:
+      value: '<br/>' # empty space
+  - type: markdown
+    attributes:
       value: |
-
-
         ## Reproducing the bug
 
         Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed. Please provide a repository where the bug can be reproduced, unless this is a critical bug that needs immediate attention.
