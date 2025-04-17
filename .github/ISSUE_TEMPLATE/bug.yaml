@@ -6,16 +6,15 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: |
-        Please [search thoroughly in GitHub](https://github.com/backstage/backstage/search?type=Issues) before reporting a new bug in order to avoid duplicates.
-
-        Please fill in each section completely. Thank you!
+      value: >
+        Please fill in each section completely, and [search in GitHub](https://github.com/backstage/backstage/search?type=Issues)
+        before reporting a new bug in order to avoid duplicates. Thank you!
   - type: checkboxes
     id: issue-labels
     attributes:
       label: '📜 Issue Labels'
       options:
-        - label: 'Descriptions of the issue labels used in this project can be found in [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
+        - label: 'Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
           required: true
   - type: textarea
     id: search-terms
@@ -29,6 +28,13 @@ body:
         e.g. "catalog github rate limited", "http root service configurer", "scaffolder template include", "entity card title"
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        <br/>
+        ## Defining the bug
+
+        Defining the bug accurately will help ensure that it is identified and fixed correctly.
   - type: dropdown
     id: project-area
     attributes:
@@ -38,16 +44,18 @@ body:
         - Unknown
         - Auditor
         - Catalog
+        - CLI Tooling
+        - Core Framework
         - Design System
         - Documentation
-        - Events
-        - Helm Charts
+        - Events System
         - Home
-        - Kubernetes
+        - Kubernetes Plugin
+        - Microsite
         - Notifications
         - OpenAPI Tooling
         - Permission Framework
-        - Scaffolder
+        - Software Templates
         - Search
         - TechDocs
     validations:
@@ -95,8 +103,8 @@ body:
   - type: markdown
     attributes:
       value: |
-
-        ### Reproducing the bug
+        <br/>
+        ## Reproducing the bug
 
         Being able to easily reproduce the bug will significantly increase the likelyhook that it can be identified and fixed. Please provide a repository where the bug can be reproduced, unless this is a critical bug that needs immediate attention.
 
