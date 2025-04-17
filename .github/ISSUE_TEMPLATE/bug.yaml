@@ -28,9 +28,9 @@ body:
         e.g. "catalog github rate limited", "http root service configurer", "scaffolder template include", "entity card title"
     validations:
       required: true
-  - type: markdown # empty space
+  - type: markdown
     attributes:
-      value: ''
+      value: ' ' # empty space
   - type: markdown
     attributes:
       value: |
@@ -102,9 +102,9 @@ body:
         Describe the behavior or result that you expected instead of the observed one.
 
         e.g. "I expect the catalog index page to overheat my CPU"
-  - type: markdown # empty space
+  - type: markdown
     attributes:
-      value: ''
+      value: ' ' # empty space
   - type: markdown
     attributes:
       value: |
