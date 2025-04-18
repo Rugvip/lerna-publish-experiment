@@ -20,6 +20,7 @@ body:
     id: search-terms
     attributes:
       label: '🔎 Search Terms'
+      render: plain
       description: |
         What search terms did you use when trying to find an existing bug report?
       placeholder: |
