@@ -7,9 +7,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        The purpose of this template is to suggest a new feature or enhancement to specific areas of Backstage, or the Backstage ecosystem as a whole. You do not need to fill in all sections, but the better the information, the greater the chance that you will receive the desired response.
+        This template lets you suggest new features for Backstage. When filling in the template you can keep it as lightweight as you want, but be sure to go into enough detail to allow reviewers to understand and respond to the proposal.
 
-        If this is a very advanced or large addition, you might want to consider creating a [Backstage Enhancement Proposal (BEP)](https://github.com/backstage/backstage/blob/master/beps/README.md) instead, as that process has better facilitation of discussions around details of the proposal. Don't worry though, you can always convert the issue in to a BEP later.
+        If this is a very advanced or large addition, you might want to consider creating a [Backstage Enhancement Proposal (BEP)](https://github.com/backstage/backstage/blob/master/beps/README.md) instead, as that process has better facilitation of discussions around details of the proposal. Don't worry though, you can always convert the issue to a BEP later.
   - type: checkboxes
     id: issue-labels
     attributes:
