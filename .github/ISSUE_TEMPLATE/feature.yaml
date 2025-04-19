@@ -1,4 +1,4 @@
-name: '🚀 New Feature'
+name: '🏗️ Feature Proposal'
 description: 'Submit a proposal for a new feature'
 labels:
   - type:feature
@@ -6,7 +6,7 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: >
+      value: |
         The purpose of this template is to suggest a new feature or enhancement to specific areas of Backstage, or the Backstage ecosystem as a whole. You do not need to fill in all sections, but the better the information, the greater the chance that you will receive the desired response.
 
         If this is a very advanced or large addition, you might want to consider creating a [Backstage Enhancement Proposal (BEP)](https://github.com/backstage/backstage/blob/master/beps/README.md) instead, as that process has better facilitation of discussions around details of the proposal. Don't worry though, you can always convert the issue in to a BEP later.
@@ -17,15 +17,19 @@ body:
       options:
         - label: 'Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
           required: true
-  - type: markdown
+  - type: textarea
+    id: search-terms
     attributes:
-      value: '<br/>' # empty space
-  - type: markdown
-    attributes:
-      value: |
-        ## Feature Details
+      label: '🔎 Search Terms'
+      render: plain
+      description: |
+        What search terms did you use when trying to find an existing bug report?
+      placeholder: |
+        List of keywords you searched for before creating this issue. Write them down here so that others can find this bug more easily and help provide feedback.
 
-        Please provide information about the feature you are requesting.
+        e.g. "catalog github rate limited", "http root service configurer", "scaffolder template include", "entity card title"
+    validations:
+      required: true
   - type: dropdown
     id: project-area
     attributes:
