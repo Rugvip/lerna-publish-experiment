@@ -1,5 +1,5 @@
-name: '🚀 Feature Suggestion'
-description: 'Submit a proposal for a new feature or enhancement'
+name: 💡 Change Suggestion'
+description: 'Suggest an idea'
 labels:
   - type:feature
   - status:needs-triage
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        This template helps you propose new features or enhancements for Backstage. You can keep your proposal lightweight, but please provide enough detail for reviewers to understand and respond effectively.
+        This template helps you propose new features, enhancements, or other ideas for Backstage. You can keep your proposal lightweight, but please provide enough detail for reviewers to understand and respond effectively.
 
         For complex additions, consider creating a [Backstage Enhancement Proposal](https://github.com/backstage/backstage/blob/master/beps/README.md) (BEP) instead, as this process streamlines discussions and iteration. Don't worry - you can always convert this issue to a BEP later.
   - type: checkboxes
@@ -33,7 +33,7 @@ body:
   - type: dropdown
     id: project-area
     attributes:
-      label: Project Area
+      label: '🗃️ Project Area'
       description: What area of the project would this feature be related to? This will help find an owner for the issue faster.
       options:
         - Unknown
@@ -89,7 +89,7 @@ body:
   - type: checkboxes
     id: read-code-of-conduct
     attributes:
-      label: '🏢 Have you read the Code of Conduct?'
+      label: 'Have you read the Code of Conduct?'
       options:
         - label: 'I have read the [Code of Conduct](https://github.com/backstage/backstage/blob/master/CODE_OF_CONDUCT.md)'
           required: true
