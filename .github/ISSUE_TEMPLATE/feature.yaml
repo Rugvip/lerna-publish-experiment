@@ -1,5 +1,5 @@
-name: '🏗️ Feature Proposal'
-description: 'Submit a proposal for a new feature'
+name: '🚀 Feature Suggestion'
+description: 'Submit a proposal for a new feature or enhancement'
 labels:
   - type:feature
   - status:needs-triage
@@ -7,9 +7,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        This template lets you suggest new features for Backstage. When filling in the template you can keep it as lightweight as you want, but be sure to go into enough detail to allow reviewers to understand and respond to the proposal.
+        This template helps you propose new features or enhancements for Backstage. You can keep your proposal lightweight, but please provide enough detail for reviewers to understand and respond effectively.
 
-        If this is a complex addition, you may want to consider creating a [Backstage Enhancement Proposal](https://github.com/backstage/backstage/blob/master/beps/README.md) (BEP) instead, as that process simplifies discussions and iteration around details in the proposal. Don't worry though, you can always convert the issue to a BEP later.
+        For complex additions, consider creating a [Backstage Enhancement Proposal](https://github.com/backstage/backstage/blob/master/beps/README.md) (BEP) instead, as this process streamlines discussions and iteration. Don't worry - you can always convert this issue to a BEP later.
   - type: checkboxes
     id: issue-labels
     attributes:
@@ -61,22 +61,22 @@ body:
       required: true
     attributes:
       label: '🔖 Need'
-      description: What's the reasoning behind this change, who does it benefit?
+      description: What is the rationale for this change, and who will benefit from it?
       placeholder: |
-        Explain why this change is important and who it can benefit. It can also be helpful to provide context for the change, for example highlighting past work that has been done in the area.
+        Explain why this change is important and who will benefit from it. Provide context for the change, such as highlighting relevant past work in this area.
   - type: textarea
     id: proposal
     validations:
       required: true
     attributes:
       label: '📝 Proposal'
-      description: Explain the change that you are suggesting.
+      description: Describe the change that you are suggesting.
       placeholder: |
-        Describe the proposal in as much detail as needed for reviewers to give concrete feedback.
+        Provide sufficient detail for reviewers to give concrete feedback.
 
-        Including an proposed implementation is optional, but if you do it can be helpful to incude design details such as new TypeScript examples, database schema, or sequence diagrams.
+        Including a proposed implementation is optional, but if you do, consider adding design details such as TypeScript examples, database schema, or sequence diagrams.
 
-        If the change require particular care when being rolled out, it can also be helpful to for example include a plan for a phased release.
+        If the change requires particular care when being rolled out, it can be helpful to for example include a plan for a phased release.
   - type: textarea
     id: alternatives
     attributes:
@@ -85,7 +85,7 @@ body:
       placeholder: |
         Did you consider any other approaches, and if so, why did you rule them out?
 
-        These do not need to be as detailed as the proposal, but should include enough information to express the idea and why it was not acceptable.
+        These do not need to be as detailed as the main proposal, but should include enough information to understand the idea and why it wasn't suitable.
   - type: checkboxes
     id: read-code-of-conduct
     attributes:
