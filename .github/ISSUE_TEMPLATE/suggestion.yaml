@@ -1,7 +1,7 @@
-name: 💡 Change Suggestion'
-description: 'Suggest an idea'
+name: '💡 Change Suggestion'
+description: 'Suggest an idea for a new feature or change to Backstage'
 labels:
-  - type:feature
+  - type:suggestion
   - status:needs-triage
 body:
   - type: markdown
