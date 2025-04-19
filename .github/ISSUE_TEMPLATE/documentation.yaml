@@ -6,10 +6,10 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: >
+      value: |
         This template is used to report issues in the Backstage documentation.
 
-        The docs at [backstage.io](https://backstage.io) are only updated when a new release is made. Before reporting an issue here, please check that the issue also exists in the ["next"](https://backstage.io/docs/next/overview/what-is-backstage) version of the docs, which you can switch to in the top-right corner of the page.
+        The documentation at [backstage.io](https://backstage.io) is only updated when a new release is made. Before reporting an issue here, please check that the issue also exists in the ["next"](https://backstage.io/docs/next/overview/what-is-backstage) version of the documentation, which you can switch to in the top-right dropdown menu.
   - type: checkboxes
     id: issue-labels
     attributes:
