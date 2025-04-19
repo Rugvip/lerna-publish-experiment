@@ -1,41 +1,87 @@
-name: 🚀 Feature
+name: '🚀 New Feature'
 description: 'Submit a proposal for a new feature'
-title: '🚀 Feature: <title>'
-labels: [enhancement]
+labels:
+  - type:feature
+  - status:needs-triage
 body:
   - type: markdown
     attributes:
-      value: |
-        We value your time and efforts to submit this Feature request form. 🙏
-  - type: textarea
-    id: feature-description
-    validations:
-      required: true
-    attributes:
-      label: '🔖 Feature description'
-      description: 'A clear and concise description of what the feature is.'
-      placeholder: 'You should add ...'
-  - type: textarea
-    id: context
-    validations:
-      required: true
-    attributes:
-      label: '🎤 Context'
-      description: 'Please explain why this feature should be implemented and how it would be used. Add examples, if applicable.'
-      placeholder: 'In my use-case, ...'
-  - type: textarea
-    id: implementation
-    attributes:
-      label: '✌️ Possible Implementation'
-      description: 'A clear and concise description of what you want to happen.'
-      placeholder: 'Not obligatory, but ideas as to the implementation of the addition or change'
+      value: >
+        The purpose of this template is to suggest a new feature or enhancement to specific areas of Backstage, or the Backstage ecosystem as a whole. You do not need to fill in all sections, but the better the information, the greater the chance that you will receive the desired response.
+
+        If this is a very advanced or large addition, you might want to consider creating a [Backstage Enhancement Proposal (BEP)](https://github.com/backstage/backstage/blob/master/beps/README.md) instead, as that process has better facilitation of discussions around details of the proposal. Don't worry though, you can always convert the issue in to a BEP later.
   - type: checkboxes
-    id: no-duplicate-issues
+    id: issue-labels
     attributes:
-      label: '👀 Have you spent some time to check if this feature request has been raised before?'
+      label: '📜 Issue Labels'
       options:
-        - label: "I checked and didn't find similar issue"
+        - label: 'Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md)'
           required: true
+  - type: markdown
+    attributes:
+      value: '<br/>' # empty space
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Details
+
+        Please provide information about the feature you are requesting.
+  - type: dropdown
+    id: project-area
+    attributes:
+      label: Project Area
+      description: What area of the project would this feature be related to? This will help find an owner for the issue faster.
+      options:
+        - Unknown
+        - Auditor
+        - Catalog
+        - CLI Tooling
+        - Core Framework
+        - Design System
+        - Documentation
+        - Events System
+        - Home
+        - Kubernetes Plugin
+        - Microsite
+        - Notifications
+        - OpenAPI Tooling
+        - Permission Framework
+        - Software Templates
+        - Search
+        - TechDocs
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    validations:
+      required: true
+    attributes:
+      label: '🔖 Need'
+      description: What's the reasoning behind this change, who does it benefit?
+      placeholder: |
+        Explain why this change is important and who it can benefit. It can also be useful to provide some context for the change as well, for example highlighting past work that has been done in the area.
+  - type: textarea
+    id: proposal
+    validations:
+      required: true
+    attributes:
+      label: '📝 Proposal'
+      description: Explain the change that you are suggesting.
+      placeholder: |
+        Describe the proposal in as much detail as needed for reviewers to give concrete feedback.
+
+        It can sometimes be helpful to incude design details such as new TypeScript examples, database schema, or sequence diagrams.
+
+        If the change require particular care when being rolled out, it can also be helpful to for example include a plan for a phased release.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: '🔄 Alternatives'
+      description: Did you consider any other approaches?
+      placeholder: |
+        Did you consider any other approaches, and if so, why did you rule them out?
+
+        These do not need to be as detailed as the proposal, but should include enough information to express the idea and why it was not acceptable.
   - type: checkboxes
     id: read-code-of-conduct
     attributes:
@@ -49,6 +95,10 @@ body:
       label: Are you willing to submit PR?
       description: This is absolutely not required, but we are happy to guide you in the contribution process.
       options:
-        - Yes I am willing to submit a PR!
+        - Undecided
+        - Yes, and I have enough information to get started
+        - Yes, but I would like some more guidance
         - No, but I'm happy to collaborate on a PR with someone else
         - No, I don't have time to work on this right now
+    validations:
+      required: true
