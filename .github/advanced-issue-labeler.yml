@@ -1,7 +1,6 @@
 policy:
-  - template: ['bug.yaml', 'suggestion.yaml', 'documentation.yaml', 'maintenance.yaml']
-    section:
-      - id: ['area']
+  - section:
+      - id: ['project-area']
         block-list: []
         label:
           - name: 'area:auditor'
