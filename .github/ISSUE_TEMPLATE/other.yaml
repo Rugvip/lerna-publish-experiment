@@ -16,5 +16,7 @@ body:
           required: true
   - type: textarea
     id: contents
+    attributes:
+      label: Content
     validations:
       required: true
