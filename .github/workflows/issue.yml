@@ -22,6 +22,8 @@ jobs:
       - name: Parse issue form
         uses: stefanbuck/github-issue-parser@v3
         id: issue-parser
+        with:
+          template-path: .github/common-template-fields.yaml
 
       - name: Add advanced issue labels
         uses: redhat-plumbers-in-action/advanced-issue-labeler@v2
