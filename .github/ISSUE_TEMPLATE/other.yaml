@@ -10,7 +10,7 @@ body:
   - type: checkboxes
     id: acknowledgement
     attributes:
-      label: Acknowledgement
+      label: '📝 Acknowledgement'
       options:
         - label: I acknowledge that issues using this template may be closed without further explanation.
           required: true
